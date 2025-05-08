@@ -1,6 +1,6 @@
 # Ollama Coding Assistant
 
-A Python-based coding assistant that uses Ollama's codellama models to provide code completions, explanations, and refinements. It is 
+A Python-based coding assistant that runs locally on your machine. 
 
 ## Features
 
