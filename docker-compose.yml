@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ollama-coding-assistant:
+    build: .
+    ports:
+      - "11434:11434"  # Ollama API
+      - "8888:8888"    # Jupyter notebook
+    volumes:
+      - ./notebooks:/app/notebooks  # Mount a local directory for notebooks
+      - ./docs:/app/docs            # Mount docs directory
+      - ollama-models:/root/.ollama  # Persist models between runs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  ollama-models:
