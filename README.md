@@ -1,9 +1,6 @@
 # Ollama Coding Assistant
 
-A Python-based coding assistant that uses Ollama's codellama models to provide code completions, explanations, and refinements.
-
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yourusername/ollama-coding-assistant/python-tests.yml?branch=main)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A Python-based coding assistant that uses Ollama's codellama models to provide code completions, explanations, and refinements. It is 
 
 ## Features
 
@@ -136,24 +133,42 @@ See `notebooks/example_notebook.ipynb` for usage examples.
 
 ## Project Structure
 
+Current project structure after reorganization:
+
 ```
 ollama-coding-assistant/
 │
-├── .github/workflows/     # GitHub Actions workflows
-├── docs/                  # Documentation files
-├── notebooks/             # Jupyter notebooks 
-├── tests/                 # Unit tests
+├── .github/workflows/           # GitHub Actions workflows
+│   └── python-tests.yml         # Python testing workflow
 │
-├── code_assistant.py      # Main code assistant class
-├── requirements.txt       # Python dependencies
-├── setup.py               # Package setup file
+├── docs/                        # Documentation files
+│   └── usage.md                 # Detailed usage guide
 │
-├── start_local.sh         # Script to start the assistant locally
-├── stop_local.sh          # Script to stop the local environment
-├── start.sh               # Script to start the Docker environment
+├── notebooks/                   # Jupyter notebooks 
+│   ├── README.md                # Notebooks documentation
+│   └── example_notebook.ipynb   # Example usage notebook
 │
-├── Dockerfile             # Docker image definition
-└── docker-compose.yml     # Docker Compose configuration
+├── ollama_coding_assistant/     # Python package directory
+│   ├── __init__.py              # Package initialization
+│   └── code_assistant.py        # Main code assistant class
+│
+├── tests/                       # Unit tests
+│   ├── README.md                # Test documentation
+│   ├── __init__.py              # Test package initialization
+│   └── test_code_assistant.py   # Test cases
+│
+├── CONTRIBUTING.md              # Contribution guidelines
+├── LICENSE                      # MIT License
+├── README.md                    # Project documentation
+├── requirements.txt             # Python dependencies
+├── setup.py                     # Package setup file
+│
+├── start_local.sh               # Script to start locally
+├── stop_local.sh                # Script to stop local environment
+├── start.sh                     # Script to start Docker environment
+│
+├── Dockerfile                   # Docker image definition
+└── docker-compose.yml           # Docker Compose configuration
 ```
 
 ## License
